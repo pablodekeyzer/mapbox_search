@@ -35,19 +35,6 @@ Suggestion _$SuggestionFromJson(Map<String, dynamic> json) => Suggestion(
           : Context.fromJson(json['context'] as Map<String, dynamic>),
       language: json['language'] as String,
       maki: json['maki'] as String?,
-      externalIds:
-          ExternalIds.fromJson(json['external_ids'] as Map<String, dynamic>),
-      poiCategory: (json['poi_category'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      poiCategoryIds: (json['poi_category_ids'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      brand:
-          (json['brand'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      brandId: (json['brand_id'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
     );
 
 Map<String, dynamic> _$SuggestionToJson(Suggestion instance) =>
